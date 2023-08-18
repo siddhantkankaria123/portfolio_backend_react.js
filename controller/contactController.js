@@ -4,8 +4,8 @@ const saveContactDetails = (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "siddhantkankaria122@gmail.com",
-      pass: "lstidijkqjjmcauw",
+      user: process.env.EMAIL,
+      pass: process.env.PASS,
     },
   });
   var mailoptions = {
